@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spar-Check starten – jederzeitsparen</title>
+<link rel="canonical" href="https://jederzeitsparen.de/check/start/">
+<link rel="preload" href="/fonts/host-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/style.css?v=13">
+<meta name="theme-color" content="#faf6f0">
+<meta name="robots" content="noindex">
+<meta name="description" content="Ein paar Fragen zum Antippen, dann schickst du mir deine Antworten per Instagram oder Mail.">
+<link rel="icon" href="/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/icon-180.png">
+<meta property="og:title" content="Spar-Check starten">
+<meta property="og:image" content="https://jederzeitsparen.de/og-image-v4.jpg">
+</head>
+<body>
+<header class="site-head"><div class="in"><a class="logo" href="/">jederzeit<span>sparen</span></a><nav class="site-nav" aria-label="Hauptnavigation"><a href="/#guides">Spar-Guides</a><a href="/check/">Check</a></nav></div></header>
+<div class="wrap">
+<div class="fb" id="fb">
+  <div class="fb-kopf">
+    <span class="fb-schritt" id="fbSchritt">Frage 1</span>
+    <div class="fb-balken"><i id="fbBalken"></i></div>
+  </div>
+  <div id="fbInhalt" aria-live="polite"></div>
+  <div class="fb-nav" id="fbNav">
+    <button type="button" class="knopf-hell" id="fbZurueck">Zurück</button>
+    <button type="button" class="knopf2" id="fbWeiter">Weiter</button>
+  </div>
+  <noscript><p>Das Formular braucht JavaScript. Schreib mir alternativ CHECK per Instagram oder Mail, die Fragen findest du auf der <a href="/check/">Check-Seite</a>.</p></noscript>
+</div>
+<p class="hinweis fb-dsgvo">Deine Antworten bleiben auf deinem Handy, bis du sie selbst per Instagram oder Mail abschickst. Diese Seite speichert nichts. Mehr in der <a href="/datenschutz/">Datenschutzerklärung</a>.</p>
+</div>
+<footer class="site-foot"><div class="in"><nav><a href="/impressum/">Impressum</a><a href="/datenschutz/">Datenschutz</a><a href="https://www.instagram.com/jederzeitsparen/">Instagram</a></nav><p>Unabhängiger Ratgeber: keine Verbindung zu den genannten Händlern und Marken. Die Namen dienen nur der Beschreibung, die Marken gehören den jeweiligen Inhabern.</p></div></footer>
+<script>
+(function(){
+var MAIL='jederzeitsparen@mail.online-impressum.de', IG='https://ig.me/m/jederzeitsparen';
+var F={
+ art:{t:'Worum geht es dir?',typ:1,o:['Großer Einkauf ab 150 €','Mein Alltag: Wo ich regelmäßig einkaufe','Feste Kosten: Handy, Internet, Strom, Abos und Co.']},
+ land:{t:'Wo wohnst du?',s:'Wohnort',h:'Meine Wege sind auf Deutschland ausgelegt. Aus Österreich oder der Schweiz kannst du vor allem Online-Wege nutzen.',typ:1,o:['Deutschland','Österreich','Schweiz','Woanders']},
+ haushalt:{t:'Wie viele Erwachsene leben in deinem Haushalt?',h:'Wichtig, weil manche Neukunden-Angebote pro Person gelten.',typ:1,o:['1','2','3 oder mehr']},
+ kinder:{t:'Leben Kinder bei dir?',typ:1,o:['Ja','Nein']},
+ produkt:{t:'Welchen Artikel willst du kaufen?',h:'Marke und Modell oder einfach den Link. Ich vergleiche mehrere Shops und rechne Gutscheine, Cashback und Coupons dazu. Der billigste Preis ist am Ende nicht immer der günstigste.',typ:3,pflicht:1,ph:'z. B. Bosch Spülmaschine SMS4HVI33E oder Link',lang:1},
+ shop:{t:'Hast du schon einen Shop im Blick?',h:'Freiwillig. Wenn nicht, suche ich den günstigsten Weg.',typ:3,ph:'z. B. MediaMarkt, Otto, IKEA'},
+ kanal:{t:'Online oder im Laden?',s:'Kaufen',typ:1,o:['Online','Im Laden','Egal, Hauptsache günstig']},
+ gebraucht:{t:'Käme auch gebraucht oder B-Ware infrage?',s:'Gebraucht oder B-Ware',h:'Zum Beispiel Ausstellungsstücke, Rückläufer oder geprüfte Gebrauchtware. Da steckt oft der größte Hebel.',typ:1,o:['Ja','Nur wenn es wie neu ist','Nein, nur neu']},
+ betrag:{t:'Ungefähr wie teuer?',typ:1,o:['150 bis 300 €','300 bis 1.000 €','Über 1.000 €']},
+ wann:{t:'Wann willst du kaufen?',typ:1,o:['Diese Woche','In den nächsten 4 Wochen','Kann auch 1 bis 3 Monate warten']},
+ laeden:{t:'Wo kaufst du regelmäßig ein?',h:'Mehrere möglich. Fehlt dein Laden? Tipp auf „Anderer Laden“ und schreib ihn dazu.',typ:2,o:['Edeka','REWE','Lidl','Aldi Nord','Aldi Süd','Netto','Penny','Kaufland','Globus','dm','Rossmann','Müller','IKEA','Amazon','Obi','Hornbach','toom','Anderer Laden'],frei:'Anderer Laden'},
+ budget:{t:'Wie viel gibst du dort im Monat ungefähr aus?',h:'Grob reicht. Damit rechne ich aus, was dir die Wege im Jahr bringen.',typ:1,o:['Unter 300 €','300 bis 600 €','600 bis 900 €','Über 900 €']},
+ tanken:{t:'Hast du ein Auto? Wo tankst du meistens?',s:'Tanken',h:'Mehrere möglich.',typ:2,o:['Kein Auto','Aral','Shell','Esso','JET','TotalEnergies','Freie Tankstelle','Andere'],frei:'Andere',ex:['Kein Auto']},
+ einkauf:{t:'Wie kaufst du im Supermarkt ein?',s:'Einkaufsverhalten',h:'Mehrere möglich. Ehrlich ist besser als ideal.',typ:2,o:['Ich lese Prospekte oder schaue Angebote in der App','Ich plane den Einkauf nach Angeboten','Ich kaufe viel Eigenmarke','Ich kaufe viel Markenware','Marken kaufe ich nur im Angebot und dann auf Vorrat','Ich achte auf den Kilopreis','Reduzierte Ware mit kurzem MHD kaufe ich gern','Wir essen vegetarisch oder vegan','Nichts davon gezielt'],ex:['Nichts davon gezielt']},
+ ausgaben:{t:'Wofür gibst du sonst regelmäßig Geld aus?',s:'Weitere Ausgaben',h:'Mehrere möglich. Für vieles davon gibt es eigene Sparwege, oft über Gutscheine mit Rabatt.',typ:2,o:['Restaurant oder Lieferdienst','Bäcker oder Café','Fitnessstudio oder Sportverein','Friseur oder Kosmetik','Freizeit und Erlebnisse (Kino, Freizeitpark …)','Urlaub und Reisen','Online-Shopping (Kleidung, Elektronik …)','Haustier','Apotheke','Kinderkleidung und Spielzeug','Etwas anderes','Nichts davon'],frei:'Etwas anderes',ex:['Nichts davon']},
+ plz:{t:'Wie lautet deine Postleitzahl?',s:'PLZ',h:'Freiwillig, aber hilfreich: Edeka und Aldi haben je nach Region andere Aktionen, und manche Gutscheine gelten nur in deiner Stadt.',typ:3,ph:'z. B. 18055'},
+ fix:{t:'Welche festen Kosten soll ich mir anschauen?',h:'Mehrere möglich.',typ:2,o:['Handyvertrag','Internet','Strom','Gas','Kfz-Versicherung','Girokonto mit Gebühr','Streaming und Abos','Fitnessstudio','Etwas anderes'],frei:'Etwas anderes'},
+ enden:{t:'Weißt du, wann deine Verträge enden?',typ:1,o:['Ja, ich habe eine Liste','Bei manchen','Nein, keine Ahnung']},
+ apps:{t:'Was nutzt du schon oder hast du schon gemacht?',s:'Nutze ich schon',h:'Mehrere möglich. So weiß ich, wo ich anfangen kann. Keine Sorge, wenn nichts davon dabei ist.',typ:2,o:['PAYBACK-Coupons aktivieren','Apps der Händler (z. B. Lidl Plus, Rossmann, dm, Kaufland, REWE)','Cashback-Portale (z. B. Shoop, TopCashback, iGraal)','Gutscheinkarten mit Rabatt gekauft (z. B. Wunschgutschein, Cadooz, BestChoice)','Gutscheinkarten im Supermarkt mit Extra-PAYBACK-Punkten gekauft','Mit Gutschein- oder Geschenkkarten an der Kasse bezahlt','Preisvergleich (z. B. Idealo, Geizhals)','Miles & More','Etwas anderes','Nichts davon'],frei:'Etwas anderes',ex:['Nichts davon']},
+ meilen:{t:'Sammelst du gezielt Meilen?',h:'Meilen lohnen sich vor allem, wenn du viel und weit fliegst. Sonst spart der direkte Weg in Euro oft mehr.',typ:1,o:['Ja, ich will weiter Meilen sammeln','Ich bin offen für Wege, direkt in Euro zu sparen','Weiß ich noch nicht'],wenn:function(){return (a.apps||[]).indexOf('Miles & More')>-1;}},
+ aufwand:{t:'Wie viel Aufwand ist für dich okay?',typ:1,o:['Kaum: 5 Minuten pro Woche','Etwas: 15 Minuten pro Woche','Gern mehr, wenn es sich lohnt']},
+ extra:{t:'Noch etwas, das ich wissen sollte?',mitName:1,h:'Freiwillig. Zum Beispiel ein Weg, den du schon nutzt, oder eine Frage, die dich beschäftigt.',typ:3,ph:'Deine Nachricht',lang:1},
+ name:{t:'Wie darf ich dich ansprechen?',h:'Freiwillig. Ein Vorname reicht.',typ:3,ph:'Vorname',ac:'given-name'}
+};
+var WEGE=[['land','haushalt','produkt','shop','kanal','gebraucht','betrag','wann','apps','meilen','aufwand','extra'],['land','haushalt','kinder','laeden','budget','einkauf','tanken','ausgaben','plz','apps','meilen','aufwand','extra'],['land','haushalt','kinder','fix','enden','plz','apps','meilen','aufwand','extra']];
+var a={},pfad=['art'],i=0;
+function weg(){if(a.art==null)return ['art'];return ['art'].concat(WEGE[F.art.o.indexOf(a.art)].filter(function(k){return !F[k].wenn||F[k].wenn();}));}
+var $=function(id){return document.getElementById(id)};
+function esc(v){return String(v||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');}
+function zeige(){
+ pfad=weg(); var k=pfad[i], f=F[k], n=pfad.length+1;
+ $('fbSchritt').textContent='Frage '+(i+1)+(a.art!=null?' von '+(n-1):'');
+ $('fbBalken').style.width=Math.round(i/(n-1)*100)+'%';
+ var h='<h1 class="fb-frage">'+f.t+'</h1>'+(f.h?'<p class="fb-hilfe">'+f.h+'</p>':'');
+ if(f.typ===3){h+=f.lang?'<textarea class="fb-feld fb-lang" id="fbFeld" maxlength="600" rows="3" placeholder="'+esc(f.ph)+'">'+esc(a[k])+'</textarea>':'<input class="fb-feld" id="fbFeld" type="text" maxlength="120" '+(f.ac?'autocomplete="'+f.ac+'" ':'')+'placeholder="'+esc(f.ph)+'" value="'+esc(a[k])+'">';}
+ else{h+='<div class="fb-opt'+(f.o.length>6&&Math.max.apply(null,f.o.map(function(x){return x.length;}))<=18?' fb-viele':'')+'" role="group">';f.o.forEach(function(o,j){var an=f.typ===2?(a[k]||[]).indexOf(o)>-1:a[k]===o;h+='<button type="button" class="fb-wahl" aria-pressed="'+an+'" data-j="'+j+'">'+o+'</button>';});h+='</div>';
+  if(f.frei&&(a[k]||[]).indexOf(f.frei)>-1){h+='<input class="fb-feld" id="fbFrei" type="text" maxlength="120" placeholder="Was genau?" value="'+esc(a[k+'_frei'])+'">';}}
+ if(f.mitName){h+='<label class="fb-hilfe fb-label" for="fbName">Wie darf ich dich ansprechen? Freiwillig, ein Vorname reicht.</label><input class="fb-feld" id="fbName" type="text" maxlength="40" autocomplete="given-name" placeholder="Vorname" value="'+esc(a.name)+'">';}
+ $('fbInhalt').innerHTML=h;
+ $('fbZurueck').style.visibility=i?'visible':'hidden';
+ $('fbNav').style.display=(f.typ===1&&!i)?'none':'';
+ $('fbWeiter').textContent=i===pfad.length-1?'Zusammenfassung':'Weiter';
+ $('fbWeiter').style.display=f.typ===1?'none':'';
+ status();
+ [].forEach.call(document.querySelectorAll('.fb-wahl'),function(b){b.onclick=function(){var o=f.o[+b.dataset.j];
+  if(f.typ===2){var l=a[k]||[];var ex=f.ex||[];if(ex.indexOf(o)>-1)l=[];else l=l.filter(function(x){return ex.indexOf(x)<0});var p=l.indexOf(o);p>-1?l.splice(p,1):l.push(o);a[k]=l;zeige();var fr=$('fbFrei');if(fr&&o===f.frei)fr.focus();}
+  else{var alt=a[k];a[k]=o;if(k==='art'&&alt!==o){Object.keys(a).forEach(function(x){if(x!=='art')delete a[x]});}weiter();}};});
+ var fe=$('fbFeld');if(fe)fe.oninput=function(){a[k]=fe.value.trim();status();};
+ var nm=$('fbName');if(nm)nm.oninput=function(){a.name=nm.value.trim();};
+ var fr=$('fbFrei');if(fr)fr.oninput=function(){a[k+'_frei']=fr.value.trim();};
+ var t=$('fbInhalt').querySelector('h1');if(t&&i)t.setAttribute('tabindex','-1'),t.focus({preventScroll:true});
+}
+function status(){var k=pfad[i],f=F[k];var ok=f.typ===3?(!f.pflicht||!!a[k]):(f.typ===2?(a[k]||[]).length>0:a[k]!=null);$('fbWeiter').disabled=!ok;}
+function weiter(){pfad=weg();if(i<pfad.length-1){i++;zeige();}else{ende();}window.scrollTo({top:0,behavior:'smooth'});}
+$('fbWeiter').onclick=weiter;
+$('fbZurueck').onclick=function(){if(i>0){i--;zeige();}};
+function text(){
+ var z=['CHECK'];pfad=weg();
+ pfad.forEach(function(k){var f=F[k],v=a[k];if(v==null||(v.length===0))return;
+  if(Array.isArray(v)){v=v.map(function(x){return (x===f.frei&&a[k+'_frei'])?x+': '+a[k+'_frei']:x;}).join(', ');}
+  z.push((f.s||f.t.replace(/\?$/,''))+': '+v);});
+ if(a.name)z.push('Name: '+a.name);
+ return z.join('\n');
+}
+function ende(){
+ var t=text();
+ $('fbSchritt').textContent='Fertig';$('fbBalken').style.width='100%';
+ $('fbInhalt').innerHTML='<h1 class="fb-frage">Deine Antworten</h1><p class="fb-hilfe">Schick sie mir so, wie es dir lieber ist. Per Instagram antworte ich dir meist schneller.</p><pre class="fb-text" id="fbText"></pre><div class="fb-send"><a class="knopf2" id="fbMail" href="#">Per Mail schicken</a><button type="button" class="knopf-hell" id="fbIg">Kopieren und Instagram öffnen</button></div><p class="fb-hilfe" id="fbOk" hidden>Kopiert. Im Instagram-Chat einfach einfügen und abschicken.</p>';
+ $('fbText').textContent=t;
+ $('fbMail').href='mailto:'+MAIL+'?subject=CHECK&body='+encodeURIComponent(t);
+ $('fbIg').onclick=function(){var go=function(){$('fbOk').hidden=false;setTimeout(function(){location.href=IG;},900);};
+  if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(go,function(){alt(t);go();});}else{alt(t);go();}};
+ $('fbWeiter').style.display='none';$('fbNav').style.display='';$('fbZurueck').style.visibility='visible';
+ $('fbZurueck').onclick=function(){$('fbWeiter').style.display='';$('fbZurueck').onclick=function(){if(i>0){i--;zeige();}};zeige();};
+}
+function alt(t){var x=document.createElement('textarea');x.value=t;x.setAttribute('readonly','');x.style.position='fixed';x.style.opacity='0';document.body.appendChild(x);x.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(x);}
+zeige();
+})();
+</script>
+</body>
+</html>

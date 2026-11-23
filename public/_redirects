@@ -1,0 +1,25 @@
+# Weiterleitungen (302, damit Ziele änderbar bleiben).
+/go/topcashback-ikea  https://www.topcashback.de/ref/Jederzeitsparen  302
+/go/topcashback       https://www.topcashback.de/ref/Jederzeitsparen  302
+/go/guides            /                                                302
+/go/newsletter        /newsletter/                                     302
+/ikea-guide/ikea-sparguide-v1.pdf  /ikea-guide/  302
+/ikea-guide/ikea-sparguide.pdf     /ikea-guide/  302
+/go/shoop             https://www.shoop.de/invite/IwQCWhC3nI/  302
+/go/amex-payback      https://www.americanexpress.com/de-de/credit-cards/referral/prospect/cards/intl/vanity/payback?CORID=p%7EA%7EU%7EL%7EG%7Ew%7EK%7Es%7Ep-1791534382066-162650&CPID=100364619&GENCODE=349993064180926&XL=MIANS&ref=pAULGwKsp&xrefer=payback  302
+/go/cadooz            https://mydealz.ace-vorteilswelt.de/  302
+/go/gutscheingold-kids     https://amzn.eu/d/09gp45Cu  302
+/go/gutscheingold-fashion  https://www.amazon.de/dp/B0HJRTMB3V  302
+# Kurzlinks zu den Guides
+/edeka                /edeka-guide/  301
+/rewe                 /rewe-guide/  301
+/netto                /netto-guide/  301
+/lidl                 /lidl-guide/  301
+/kaufland             /kaufland-guide/  301
+/penny                /penny-guide/  301
+/dm                   /dm-guide/  301
+/rossmann             /rossmann-guide/  301
+/ikea                 /ikea-guide/  301
+/amazon               /amazon-guide/  301
+/zalando              /zalando-guide/  301
+/otto                 /otto-guide/  301
