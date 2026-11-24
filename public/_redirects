@@ -6,11 +6,14 @@
 /ikea-guide/ikea-sparguide-v1.pdf  /ikea-guide/  302
 /ikea-guide/ikea-sparguide.pdf     /ikea-guide/  302
 /go/shoop             https://www.shoop.de/invite/IwQCWhC3nI/  302
-/go/amex-payback      https://www.americanexpress.com/de-de/credit-cards/referral/prospect/cards/intl/vanity/payback?CORID=p%7EA%7EU%7EL%7EG%7Ew%7EK%7Es%7Ep-1791534382066-162650&CPID=100364619&GENCODE=349993064180926&XL=MIANS&ref=pAULGwKsp&xrefer=payback  302
+/go/amex-payback      https://americanexpress.com/de-de/referral/payback?ref=pAULGwKsp&XL=MIMNS  302
 /go/cadooz            https://mydealz.ace-vorteilswelt.de/  302
 /go/gutscheingold-kids     https://amzn.eu/d/09gp45Cu  302
 /go/gutscheingold-fashion  https://www.amazon.de/dp/B0HJRTMB3V  302
 /go/magenta-pay            https://baf.magenta.pay/de/7e9d72fa-4604-422b-91a8-10767736525c  302
+/go/budgey                 https://www.budgey.de/i/99ZMQ8  302
+/go/amex-cadooz            https://amex.cadooz.com/  302
+/go/bestchoice-partner     https://standard-catalog.cadooz.com/frontend/cat/view.do?view=custom_view&lt=default&sortBy=alpha&ptg=vou  302
 # Kurzlinks zu den Guides
 /edeka                /edeka-guide/  301
 /rewe                 /rewe-guide/  301
@@ -24,3 +27,6 @@
 /amazon               /amazon-guide/  301
 /zalando              /zalando-guide/  301
 /otto                 /otto-guide/  301
+/aral                 /aral-guide/  301
+/amex                 /amex-guide/  301
+/bestchoice           /amex-guide/  301
